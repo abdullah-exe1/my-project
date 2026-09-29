@@ -1,0 +1,19 @@
+digraph {
+	graph [dpi=1000 margin=0 nodesep=1.02 pad=1.5 rankdir=LR ranksep=1.1 splines=true]
+	d [label=start shape=oval]
+	a [label=" inter a num" shape=parallelogram]
+	b [label="input " shape=parallelogram]
+	c [label="chack input" shape=box]
+	g [label="if num>1" shape=diamond]
+	f [label="print done" shape=parallelogram]
+	q [label="num+1" shape=box]
+	w [label=end shape=oval]
+	d -> a
+	a -> b
+	b -> c
+	c -> g
+	g -> f [label=True]
+	g -> q [label=False]
+	q -> c [label="chack num"]
+	f -> w
+}
