@@ -73,7 +73,7 @@ L3.w = np.load("L3_AI3.W.npy")
 L3.b = np.load("L3_AI3.B.npy")
 
 
-for ai in range(500001):
+for ai in range(500):
 
     out1 = L1.forward(sx.T)
     out2 = L2.forward(out1)
@@ -94,7 +94,7 @@ for ai in range(500001):
     acc = (1 - mae_loss) * 100
 
 
-    if ai % 100000 == 0:
+    if ai % 100 == 0:
         print(f'{(ai - 1) + 1}-pred is {pred_real[:, 0]} the true is {true_real[:, 0]}')
         print()
         print(f'{(ai - 1)  + 1}-accurse is {acc}')
